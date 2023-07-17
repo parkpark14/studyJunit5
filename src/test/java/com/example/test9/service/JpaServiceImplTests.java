@@ -24,6 +24,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 // @ExtendWith(SpringExtension.class)   이건 왜 안될까???
 @Import(JpaServiceImpl.class)
 @SpringBootTest(classes = JpaServiceImpl.class)
+// @SpringBootTest(classes = JpaServiceImpl.class , HelloServiceImpl.class)
 public class JpaServiceImplTests {
 
     @Autowired
