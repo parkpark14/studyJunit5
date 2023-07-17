@@ -9,4 +9,5 @@ public interface JpaService {
     JpaModel getJpaData(String id);
     JpaModel getJpaDataByName(String name);
     List<JpaModel> getJpaDataAll();
+    String JpaTest();
 }

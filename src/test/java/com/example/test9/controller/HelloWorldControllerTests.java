@@ -9,6 +9,8 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import com.example.test9.service.HelloSerivceImpl;
 
+import lombok.extern.slf4j.Slf4j;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -21,6 +23,7 @@ import static org.hamcrest.Matchers.containsString;
 
 // Controller 테스트를 작성해본다.
 // 단위 테스트로 작성해본다.
+@Slf4j
 @WebMvcTest(HelloWorldController.class)
 public class HelloWorldControllerTests {
     
@@ -45,5 +48,10 @@ public class HelloWorldControllerTests {
             e.printStackTrace();
         }
             
+    }
+
+    @Test
+    void Test2() {
+        log.info("test2");
     }
 }

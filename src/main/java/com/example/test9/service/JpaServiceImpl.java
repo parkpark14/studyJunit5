@@ -52,5 +52,10 @@ public class JpaServiceImpl implements JpaService {
         
         return jpaModelAll;
     }
+
+    @Override
+    public String JpaTest() {
+        return "JpaTest";
+    }
     
 }
