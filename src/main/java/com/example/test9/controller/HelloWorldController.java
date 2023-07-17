@@ -21,6 +21,6 @@ public class HelloWorldController {
     public @ResponseBody String hello() {
         log.info("HelloWorldController.hello()");
         String hello = helloSerivce.hello();
-        return hello;
+        return hello + ", World";
     }
 }

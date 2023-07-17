@@ -41,7 +41,7 @@ public class JpaServiceImpl implements JpaService {
 
     @Override
     public List<JpaModel> getJpaDataAll() {
-        
+
         List<JpaEntity> jpaEntityAll = jpaRepository.findAll();
 
         List<JpaModel> jpaModelAll = new ArrayList<JpaModel>();

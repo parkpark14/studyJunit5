@@ -9,4 +9,6 @@ import com.example.test9.entity.JpaEntity;
 public interface JpaRepository 
     extends MongoRepository<JpaEntity, String> {
     JpaEntity findByName(String name);
+
+    //  @Query(value = "{$where: 'this.name == ?0'}", count = true)
 }

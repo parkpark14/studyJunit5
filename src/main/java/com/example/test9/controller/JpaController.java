@@ -1,5 +1,7 @@
 package com.example.test9.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,6 +31,21 @@ public class JpaController {
     ) {
         JpaModel jpaModel = jpaService.getJpaData(id);
         return jpaModel;
+    }
+
+    @GetMapping(value = "/mongoFindByName/{name}")
+    public JpaModel mongoFindByName(
+        @PathVariable String name
+    ) {
+        JpaModel jpaModel = jpaService.getJpaDataByName(name);
+        return jpaModel;
+    }
+
+    @GetMapping(value = "/mongoFindAll")
+    public List<JpaModel> mongoFindAll(
+    ) {
+        List<JpaModel> jpaModelAll = jpaService.getJpaDataAll();
+        return jpaModelAll;
     }
 
     @GetMapping(value = "/mongoInsert/{id}/{name}/{location}/{age}")

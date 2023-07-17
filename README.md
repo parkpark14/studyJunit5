@@ -25,6 +25,7 @@ mongo가 안되어 => mongosh
 
 db
 show dbs
+show collections
 
 use jpatest
 db.jpatest.insert({"name": "MongoDB Tutorial", "author": "velopert"});

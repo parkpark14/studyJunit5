@@ -10,4 +10,14 @@ spring:
       authentication-database: admin
       username: root
       password: root
-      database: 
+      database: test
+
+# logging.level.org.springframework.data.mongodb.core.MongoTemplate=DEBUG
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
